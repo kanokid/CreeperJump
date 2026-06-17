@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dcf8w7j1mingk"]
+
+[ext_resource type="Script" uid="uid://ur8qb2x5sswa" path="res://scenes/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://cigtb8y4afuuh" path="res://assets/creeper.png" id="2_qhqgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgp6g"]
+size = Vector2(168.33333, 403.33337)
+
+[node name="Player" type="CharacterBody2D" unique_id=841625462]
+scale = Vector2(2, 2)
+script = ExtResource("1_g2els")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=265084763]
+scale = Vector2(2, 2)
+texture = ExtResource("2_qhqgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=836152221]
+position = Vector2(10.833331, 8.333334)
+shape = SubResource("RectangleShape2D_sgp6g")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1363768907]
+position = Vector2(-6, -272)
+scale = Vector2(10, 10)
+zoom = Vector2(0.25, 0.25)
